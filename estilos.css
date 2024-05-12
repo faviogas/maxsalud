@@ -1,0 +1,441 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* el tamaño de caja se va a mantener estable, no importa si se le añade un padding, el tamaño de caja se quedará con el tamaño indicado y el padding crecerá hacia adentro */
+}
+
+html{
+    scroll-behavior: smooth; /*para cuando se van a las secciones el desplazamiento sea mas agradable*/
+}
+
+body{
+    font-family: 'Garamond', serif;
+}
+
+section h1{ font-size: 3.5em;}
+section h2{ font-size: 2.7em;}
+section h3{ font-size: 2em;}
+section p{ font-size: 1em;}
+section li { font-size: 2em;}
+
+button{
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 2px solid rgba(0,0,0,0.3); /*0.3 transparencia*/
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: white;
+    background-color: rgb(84, 151, 228);
+}
+
+button:hover{
+    background-color: rgb(40, 99, 209);
+}
+
+.color-acento{ color:rgb(84, 151, 228); } /*clase creada para cambiar el color de la fuente*/
+
+header {
+    position: fixed;
+    width: 100%;
+}
+
+header a{
+    text-decoration: none;
+}
+
+.navbar {
+    background-color: rgb(245,245,245);
+    height: 48px;
+    padding: 10px 12px;
+    position: relative;/*todo lo que se ponga como absoluta debajo toma como relativo*/
+}
+
+/*Menú Hamburguesa*/
+
+.checkbox, .icons {
+    position: absolute; /*se agrupan los iconos*/
+    top: 10px;
+    right: 12px;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+.icons {
+    pointer-events: none; /*para que se pueda hacer clic en el checkbox*/
+    font-size: 24px;
+}
+
+.checkbox {
+    opacity: 0;
+}
+
+.fi-br-cross {
+    display: none;
+}
+
+.checkbox:checked ~ .fi-br-menu-burger {
+    display: none;
+}
+
+.checkbox:checked ~ .fi-br-cross {
+    display: block;
+}
+
+.menu {
+    position: absolute; /*se relaciona con el navbar position: relative;*/
+    top: -106px;
+    z-index: -1; /*escondo detrás el menu*/
+    right: 0px;
+    /* display: none; */
+    width: 200px;
+    transition: 250ms;
+}
+
+.menu li{
+    list-style-type: none;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: inherit; /*hereda el color del padre*/
+    display: block;
+    padding: 10px 12px;
+}
+
+.menu li a:hover{
+    background-color: rgb(84, 151, 228);
+}
+.checkbox:checked ~ .menu {
+    top: 48px; /*altura del navbar*/
+}
+
+/*Fin Menú Hamburguesa*/
+
+
+
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 70vh; /*altura relativa*/
+    background-image: linear-gradient( /*sirve para poner un overlade oscuro a la imagen*/
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/img1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; /*para que ocupe todo el espacio disponible*/
+    background-position: center center;
+}
+
+#hero h1{
+    color: white;
+}
+
+/* #hero button{
+    font-size: 1.75em;
+} */
+
+#nosotros .container{
+    text-align: center;
+    padding: 200px 12px;
+}
+
+#nuestros-servicios{
+    background-color: rgb(30,30,30);
+    color: white;
+    text-align: center;
+}
+
+#nuestros-servicios .container{
+    padding: 150px 12px;
+}
+
+#nuestros-servicios h2{
+    margin-top: 0;
+    font-size: 2.2em;
+}
+
+#nuestros-servicios p{
+    display: none;
+}
+
+#nuestros-servicios .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px 0px;
+    margin: 30px;
+    border-radius: 15px;
+}
+
+.carta:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/examenes.jpg");
+
+}
+
+.carta:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/fisicos.jpg");
+}
+
+.carta:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/vacunacion.jpg");
+
+}
+
+#caracteristicas .container{
+    text-align: center;
+    padding: 250px 12px;
+}
+
+#caracteristicas li{
+    margin: 16px 0px;
+    font-weight: bold;
+}
+
+
+/* #contactenos {
+    text-align: center;
+    padding: 50px;
+}*/
+
+#final{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(30,30,30);
+    color: white;
+    height: 80vh;
+}
+
+#final h2{
+    font-size: 9vw; /*vw para font size relativo*/
+}
+
+#final button{
+    font-size: 5vw;
+}
+
+footer{
+    background-color: rgb(230,230,230);
+}
+
+footer p{
+    margin: 0;
+    padding: 12px;
+    color: rgb(100,100,100);
+}
+
+footer .container{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+/*Medias Query*/
+
+/*a partir de los 850px*/
+@media (min-width: 850px){
+    
+    #hero h1{
+        font-size: 5em;
+    }
+
+    #nosotros .container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #nosotros .texto{
+        width: 50%;
+        max-width: 600px;
+        text-align: initial;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #nosotros h2{
+        margin-top: 0px;
+    }
+
+    #nosotros .img-container{
+        background-image: url("img/img1.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 400px; 
+    }
+
+    #nuestros-servicios .servicios{
+        display: flex;
+        justify-content: center;
+    }
+
+    #nuestros-servicios p{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #nuestros-servicios h2{
+        font-size: 2em;
+    }
+
+    #nuestros-servicios h3{
+        margin-top: 0;
+    }
+
+    #nuestros-servicios .carta{
+        padding: 50px;
+        background-size: 100% 150px;
+        background-repeat: no-repeat; /*que no se repita la imagen*/
+        background-position-y: 0;
+        background-color: rgba(50, 50, 50, 1);
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    }
+    
+    
+    .carta:first-child{
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("img/img2.jpg");
+
+    }
+
+    .carta:nth-child(2){
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("img/fisicos.jpg");
+    }
+
+    .carta:nth-child(3){
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("img/vacunacion.jpg");
+
+    }
+
+    #caracteristicas{
+        background-image: url("img/img1.jpg");
+        background-repeat: no-repeat;
+        background-size: 500px 400px;
+        background-position: calc(100vw - 500px) 120px;
+    }
+
+    #caracteristicas .container{
+        text-align: initial;
+    }
+
+    #caracteristicas ul{
+        margin-left: 100px;
+    }
+
+    section li {
+        font-size: 1.2em;
+    }
+
+    #final h2{
+        font-size: 3em;
+    }
+
+    #final button{
+        font-size: 2em;
+    }
+
+    footer .container{
+        justify-content: flex-end;
+    }
+}
+
+
+/* @media (max-width: 600px) {
+    body {
+    font-size: 24px;
+    }
+} */
+
+/* @media (min-width: 1200px) {
+    #caracteristicas{
+        background-position-x: calc(100vw - 800px);
+    }
+} */
+
+/*a partir de los 560px pasa esto*/
+@media (min-width: 580px){
+    .checkbox, .fi-br-menu-burger, .fi-br-cross {
+        display: none;
+    }
+
+    .menu {
+        top: 0;
+        z-index: 1;
+        width: unset; /*no tiene un ancho seteado*/
+        display: flex;
+        height: 48px;
+        color: rgb(27, 27, 27);
+    }
+
+    .menu li a {
+        height: 48px;
+        padding: 14px 12px 6px;
+    }
+}
+
+/*hasta los 560px pasa esto*/
+@media (max-width: 580px) {
+    section h1{ font-size: 2.5em;}
+    section h2{ font-size: 1.7em;}
+    
+    #hero {
+        z-index: -1;
+        background-image: linear-gradient( /*sirve para poner un overlade oscuro a la imagen*/
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/img1.jpg");
+        height: 30vh;
+    }
+
+    #hero h1{
+        color: rgb(255, 255, 255);
+        
+    }
+    
+    #hero button{
+        font-size: 0.75em;
+    }
+}
