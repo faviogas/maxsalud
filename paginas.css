@@ -1,0 +1,35 @@
+.formulario {
+    position:static;
+    padding: 100px;
+    height: auto;
+    
+}
+
+#nosotros2 .container2{
+    display: block;
+    padding: 100px;
+    height: auto;
+}
+
+/*Medias Query*/
+
+/*a partir de los 850px*/
+
+@media (min-width: 850px){
+    
+    #nosotros2 .container2{
+        position: static;
+    }
+
+    #nosotros2 .texto2{
+        width: 100%;
+        max-width: 600px;
+        text-align: initial;
+        padding-left: 30px;
+        
+    }
+
+   footer .container{
+        justify-content: flex-end;
+    }
+}
