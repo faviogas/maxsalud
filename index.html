@@ -6,8 +6,9 @@
     <title>Max+Salud</title>
     <link rel="icon" type="image/x-icon" href="img/icon.ico">
     <link rel="stylesheet" href="estilos.css">
-    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="paginas.css">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-brands/css/uicons-brands.css'>
     
 </head>
 <body>
@@ -25,6 +26,7 @@
                 <li><a href="#caracteristicas">Profesionales</a></li>
                 <li><a href="/contacto.html">Contactanos</a></li>
             </ul>
+        </nav>
     </header>
 
     <section id="hero">
@@ -50,24 +52,49 @@
         <div class="container">
             <h1>Nuestros Servicios</h1>
             <div class="servicios">
-                <div class="carta">
-                    <h2>Consultas médicas para adultos y niños</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt vero corporis incidunt saepe qui commodi quasi neque veniam quam, aspernatur est beatae maxime animi sed reiciendis mollitia ducimus veritatis repellendus?</p>
-                    <button>+ Info</button>
+                <div class="carta" id="carta1">
+                    <h2>Consultas médicas para adultos y niños</h2><br>
+                    <p>En Max+Salud, ofrecemos servicios médicos integrales para todas las edades. Nuestro equipo de profesionales altamente calificados está dedicado a brindar atención médica de calidad a pacientes de todas las etapas de la vida, desde los más pequeños hasta los adultos. Nuestras consultas médicas están diseñadas para abordar una amplia variedad de necesidades de atención primaria y especializada.</p>
+                    <button class="Button_id_Consulta" onclick="showOverlay1()"> + Info </button>
                 </div>
                 <div class="carta">
-                    <h2>Exámenes físicos</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt vero corporis incidunt saepe qui commodi quasi neque veniam quam, aspernatur est beatae maxime animi sed reiciendis mollitia ducimus veritatis repellendus?</p>
-                    <button>+ Info</button>
+                    <h2>Exámenes físicos</h2><br>
+                    <p>En nuestro consultorio médico, entendemos la importancia de los exámenes físicos como una herramienta fundamental para evaluar la salud general y detectar posibles problemas médicos. Nuestro equipo de profesionales altamente capacitados realiza exámenes físicos exhaustivos para ayudarte a mantener un estilo de vida saludable y prevenir enfermedades</p>
+                    <button class="Button_id_Examen" onclick="showOverlay2()" >+ Info</button>
                 </div>
                 <div class="carta">
-                    <h2>Vacunaciones y atención preventiva</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt vero corporis incidunt saepe qui commodi quasi neque veniam quam, aspernatur est beatae maxime animi sed reiciendis mollitia ducimus veritatis repellendus?</p>
-                    <button>+ Info</button>
+                    <h2>Vacunaciones y atención preventiva</h2><br>
+                    <p>En Max+Salud, creemos firmemente en la importancia de la prevención en la salud. Es por eso que ofrecemos servicios especializados en vacunaciones y atención preventiva para proteger a nuestros pacientes de enfermedades infecciosas y promover un estilo de vida saludable.</p>
+                    <button class="Button_id_carta_vacunacion" onclick="showOverlay3()">+ Info</button>
                 </div>  
             </div>
         </div>
     </section>
+
+    <div id="infoCarta1" class="info_Carta1">
+        <div class="infoCarta1-content">
+            <span class="close-btn1" onclick="hideOverlay1()">&times;</span>
+            <p>Desde hace muchos años, el Plan Médico brinda el servicio de asistencia domiciliaria para sus Socios a través de la empresa Paramedic. Ahora, se suman dos nuevas modalidades de atención exclusivamente para casos de síntomas leves.
+                Estas nuevas formas de recibir atención médica, rápida y ágil son:<br>
+                <b>NUEVO</b>
+                Videoconsulta domiciliaria
+                Es la atención médica recibida a través de una videollamada, a la que podrás acceder Ingresando a la APP Paramedic Connect, las 24 horas del día.</p>
+        </div>
+    </div>
+    <div id="infoCarta2" class="info_Carta2">
+        <div class="infoCarta2-content">
+            <span class="close-btn2" onclick="hideOverlay2()">&times;</span>
+            <p>Durante un examen físico, nuestros médicos revisan cuidadosamente tu historial médico y realizan una evaluación completa de tu estado de salud actual. Esto puede incluir mediciones de peso y presión arterial, evaluación de la función cardíaca y respiratoria, examen de los ojos, oídos, nariz y garganta, y palpación de los órganos abdominales.
+                Además de evaluar la salud física, nuestros exámenes físicos también pueden incluir discusiones sobre tu estilo de vida, hábitos alimenticios, actividad física y cualquier preocupación o síntoma que puedas tener. Nuestro objetivo es proporcionarte una atención integral y personalizada que te ayude a mantener un estado óptimo de salud y bienestar.
+                </p>
+        </div>
+    </div>
+    <div id="infoCarta3" class="info_Carta3">
+        <div class="infoCarta3-content">
+            <span class="close-btn3" onclick="hideOverlay3()">&times;</span>
+            <p>Nuestro equipo médico altamente calificado está capacitado para administrar una amplia gama de vacunas, desde las básicas que se administran en la infancia hasta las recomendadas para adultos y viajeros. Entendemos que la inmunización es una de las formas más efectivas de prevenir enfermedades graves y proteger la salud pública, por lo que nos esforzamos por mantenernos actualizados con las últimas recomendaciones y pautas de vacunación.</p>
+        </div>
+    </div>
 
     <section id="caracteristicas">
         <div class="container">
@@ -80,37 +107,33 @@
         </div>
     </section>
 
-<!-- formulario de contacto -->
-
-    <!-- <section id="contactenos">
-        <div class="container">
-            <h3>Por favor, realice su consulta</h3>
-            <form action="/action_page.php" method="get">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre"><br><br>
-                <label for="apellido">Apellido:</label>
-                <input type="text" id="apellido" name="apellido"><br><br>
-                <input type="checkbox" name="opcion" value="1">M
-                <input type="checkbox" name="opcion" value="1">F<br><br>
-                <label for="email">Email:</label>
-                <input type="text" id="email" name="email"><br><br>
-                <label for="consulta">Consulta:</label>
-                <input type="text" id="consulta" name="consulta"><br><br>
-                <input type="submit" value="Enviar">
-                <input type="reset" value="Borar">
-            </form> 
-        </div>
-    </section> -->
-
     <section id="final">
         <h2>Testimonios y Experiencias de Pacientes</h2>
         <button>+ Info</button>
     </section>
 
     <footer>
+        <!-- <div class="container">
+            <h2>Información</h2>
+            <ul class="footer">
+                <li><a href="/nosotros.html">Quienes Somos</a></li>
+                <li><a href="#nuestros-servicios">Servicios</a></li>
+                <li><a href="#caracteristicas">Profesionales</a></li>
+                <li><a href="/contacto.html">Contactanos</a></li>
+            </ul>
+            <i class="fi fi-brands-facebook"></i>
+            <i class="fi fi-brands-twitter"></i>
+            <i class="fi fi-brands-telegram"></i>
+            <i class="fi fi-brands-instagram"></i>
+            <i class="fi fi-brands-whatsapp"></i> 
+            
+        </div> -->
         <div class="container">
             <p>&copy; Max+Salud 2024</p>
         </div>
     </footer>
+
+    <script src="scripts/script.js"></script>
+    <script src="scripts/contacto.js"></script>
 </body>
 </html>
