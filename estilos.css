@@ -1,6 +1,9 @@
 *{
+<<<<<<< HEAD
     margin: 0;
     padding: 0;
+=======
+>>>>>>> main
     box-sizing: border-box; /* el tamaño de caja se va a mantener estable, no importa si se le añade un padding, el tamaño de caja se quedará con el tamaño indicado y el padding crecerá hacia adentro */
 }
 
@@ -10,6 +13,7 @@ html{
 
 body{
     font-family: 'Garamond', serif;
+<<<<<<< HEAD
 }
 
 header h1{ font-size: 1.8em;}
@@ -18,6 +22,17 @@ section h2{ font-size: 2.7em;}
 section h3{ font-size: 2em;}
 section p{ font-size: 1em;}
 section li { font-size: 2em;}
+=======
+    margin: 0;
+}
+
+h1{ font-size: 3.5em;}
+h2{ font-size: 2.7em;}
+h3{ font-size: 2em;}
+p{ font-size: 1.25em;}
+ul{ list-style: none;}
+li{ font-size: 1.25em;}
+>>>>>>> main
 
 button{
     font-size: 1.25em;
@@ -27,6 +42,7 @@ button{
     border: 2px solid rgba(0,0,0,0.3); /*0.3 transparencia*/
     box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
     color: white;
+<<<<<<< HEAD
     background-color: rgb(84, 151, 228);
 }
 
@@ -125,19 +141,80 @@ header a{
 
 
 
+=======
+    background-color: blueviolet;
+}
+
+button:hover{
+    background-color: rgb(101, 33, 165);
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+.color-acento{ color:blueviolet; } /*clase creada para cambiar el color de la fuente*/
+
+header{
+    background-color: rgb(245,245,245);
+    
+}
+
+header .logo{
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    color: blueviolet;
+    font-size: 1.6em;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+header a:hover{
+    color: blueviolet;
+}
+
+>>>>>>> main
 #hero{
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     flex-direction: column;
+<<<<<<< HEAD
     height: 70vh; /*altura relativa*/
+=======
+    height: 90vh; /*altura relavita*/
+>>>>>>> main
     background-image: linear-gradient( /*sirve para poner un overlade oscuro a la imagen*/
         0deg,
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
+<<<<<<< HEAD
     ,url("img/comprimidas/img1.jpg");
+=======
+    ,url("img/img1.jpg");
+>>>>>>> main
     background-repeat: no-repeat;
     background-size: cover; /*para que ocupe todo el espacio disponible*/
     background-position: center center;
@@ -147,9 +224,15 @@ header a{
     color: white;
 }
 
+<<<<<<< HEAD
 /* #hero button{
     font-size: 1.75em;
 } */
+=======
+#hero button{
+    font-size: 1.75em;
+}
+>>>>>>> main
 
 #nosotros .container{
     text-align: center;
@@ -168,7 +251,11 @@ header a{
 
 #nuestros-servicios h2{
     margin-top: 0;
+<<<<<<< HEAD
     font-size: 2.2em;
+=======
+    font-size: 3.2em;
+>>>>>>> main
 }
 
 #nuestros-servicios p{
@@ -189,7 +276,11 @@ header a{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
+<<<<<<< HEAD
     ,url("img/comprimidas/examenes.jpg");
+=======
+    ,url("img/examenes.jpg");
+>>>>>>> main
 
 }
 
@@ -199,7 +290,11 @@ header a{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
+<<<<<<< HEAD
     ,url("img/comprimidas/fisicos.jpg");
+=======
+    ,url("img/fisicos.jpg");
+>>>>>>> main
 }
 
 .carta:nth-child(3){
@@ -208,7 +303,11 @@ header a{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
+<<<<<<< HEAD
     ,url("img/comprimidas/vacunacion.jpg");
+=======
+    ,url("img/vacunacion.jpg");
+>>>>>>> main
 
 }
 
@@ -222,6 +321,15 @@ header a{
     font-weight: bold;
 }
 
+<<<<<<< HEAD
+=======
+
+#contactenos {
+    text-align: center;
+    padding: 50px;
+}
+
+>>>>>>> main
 #final{
     display: flex;
     flex-direction: column;
@@ -258,12 +366,32 @@ footer .container{
     align-items: flex-end;
 }
 
+<<<<<<< HEAD
 
 /*Medias Query*/
 
 /*a partir de los 850px*/
 @media (min-width: 850px){
     
+=======
+@media (min-width: 850px){
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+>>>>>>> main
     #hero h1{
         font-size: 5em;
     }
@@ -288,7 +416,11 @@ footer .container{
     }
 
     #nosotros .img-container{
+<<<<<<< HEAD
         background-image: url("/img/comprimidas/img1.jpg");
+=======
+        background-image: url("img/img1.jpg");
+>>>>>>> main
         background-size: cover;
         background-position: center center;
         height: 500px;
@@ -306,7 +438,11 @@ footer .container{
     }
 
     #nuestros-servicios h2{
+<<<<<<< HEAD
         font-size: 2em;
+=======
+        font-size: 4em;
+>>>>>>> main
     }
 
     #nuestros-servicios h3{
@@ -321,15 +457,23 @@ footer .container{
         background-color: rgba(50, 50, 50, 1);
         box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
     }
+<<<<<<< HEAD
     
     
+=======
+
+>>>>>>> main
     .carta:first-child{
         background-image: linear-gradient(
             0deg,
             rgba(0,0,0,0.5),
             rgba(0,0,0,0.5)
         )
+<<<<<<< HEAD
         ,url("img/comprimidas/examenes.jpg");
+=======
+        ,url("img/examenes.jpg");
+>>>>>>> main
 
     }
 
@@ -339,7 +483,11 @@ footer .container{
             rgba(0,0,0,0.5),
             rgba(0,0,0,0.5)
         )
+<<<<<<< HEAD
         ,url("img/comprimidas/fisicos.jpg");
+=======
+        ,url("img/fisicos.jpg");
+>>>>>>> main
     }
 
     .carta:nth-child(3){
@@ -348,12 +496,20 @@ footer .container{
             rgba(0,0,0,0.5),
             rgba(0,0,0,0.5)
         )
+<<<<<<< HEAD
         ,url("img/comprimidas/vacunacion.jpg");
+=======
+        ,url("img/vacunacion.jpg");
+>>>>>>> main
 
     }
 
     #caracteristicas{
+<<<<<<< HEAD
         background-image: url("img/comprimidas/img1.jpg");
+=======
+        background-image: url("img/img1.jpg");
+>>>>>>> main
         background-repeat: no-repeat;
         background-size: 500px 400px;
         background-position: calc(100vw - 500px) 120px;
@@ -367,12 +523,17 @@ footer .container{
         margin-left: 100px;
     }
 
+<<<<<<< HEAD
     section li {
         font-size: 1.2em;
     }
 
     #final h2{
         font-size: 3em;
+=======
+    #final h2{
+        font-size: 5em;
+>>>>>>> main
     }
 
     #final button{
@@ -384,6 +545,7 @@ footer .container{
     }
 }
 
+<<<<<<< HEAD
 
 /* @media (max-width: 600px) {
     body {
@@ -473,4 +635,10 @@ footer .container{
     right: 10px;
     font-size: 20px;
     cursor: pointer;
+=======
+@media (min-width: 1200px) {
+    #caracteristicas{
+        background-position-x: calc(100vw - 800px);
+    }
+>>>>>>> main
 }
