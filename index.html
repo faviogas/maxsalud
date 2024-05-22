@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="paginas.css">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-brands/css/uicons-brands.css'>
-    
 </head>
 <body>
     <header>
@@ -26,14 +25,17 @@
             </ul>
         </nav>
     </header>
-
     <section id="hero">
         <h1>Bienvenidos a <br>Max+Salud</h1>
         <form action="#navbar">
-        <button><a href="nosotros.html">+ Info</a></button>
+        <button id="infoButton">+ Info</button>
     </form>
     </section>
-
+    <script>
+        document.getElementById('infoButton').addEventListener('click', function() {
+            window.location.href = '#nosotros';
+        });
+    </script>
     <section id="nosotros">
         <div class="container">
             <div class="img-container"></div>
